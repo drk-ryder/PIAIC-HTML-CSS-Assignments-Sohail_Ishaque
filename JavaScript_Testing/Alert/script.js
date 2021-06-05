@@ -128,3 +128,19 @@ function ctypeOf(){
     num4 = typeof(inputString3);
     console.log(num4);
 }
+
+// ______________________ Date __________________
+var date;
+function gDate(){
+    date = new Date();
+    console.log(date);
+}
+
+function savedDate(){
+    console.log(date);
+}
+
+function gTime(){
+    var date = new Date();
+    console.log(date);
+}
