@@ -129,7 +129,7 @@ function ctypeOf(){
     console.log(num4);
 }
 
-// ______________________ Date __________________
+// ___________________ Date & Time__________________
 var date;
 function gDate(){
     date = new Date();
@@ -140,7 +140,12 @@ function savedDate(){
     console.log(date);
 }
 
+var time;
 function gTime(){
-    var date = new Date();
-    console.log(date);
+    time = new Date().getTime();
+    console.log(time);
+}
+
+function savedTime(){
+    console.log(time);
 }
