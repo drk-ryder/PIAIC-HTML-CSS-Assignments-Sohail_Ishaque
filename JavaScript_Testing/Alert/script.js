@@ -149,3 +149,17 @@ function gTime(){
 function savedTime(){
     console.log(time);
 }
+
+var DOB2;
+function inputDOB(){
+    var eDate = prompt("Enter Date of Birth mm,dd,yyyy", new Date());
+    var DOB = new Date(eDate); 
+    DOB2 = Date.parse(eDate);
+    console.log("Year is "+ DOB.getDay());
+    console.log("eDate "+ DOB2);
+}
+
+function gYear(){
+    console.log("eDate "+ DOB2);
+    console.log("Year is "+ new Date(DOB2).getFullYear());
+}
