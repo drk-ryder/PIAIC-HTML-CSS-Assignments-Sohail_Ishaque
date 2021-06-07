@@ -163,3 +163,7 @@ function gYear(){
     console.log("eDate "+ DOB2);
     console.log("Year is "+ new Date(DOB2).getFullYear());
 }
+function gcTime(){
+    console.log("eDate "+ DOB2);
+    console.log("Current Time is "+ new Date(DOB2).getDate() +" "+ new Date(DOB2).getMonth() + " " + new Date(DOB2).getFullYear());
+}
