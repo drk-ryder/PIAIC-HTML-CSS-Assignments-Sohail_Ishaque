@@ -1,3 +1,5 @@
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript
 // var username = "Sohail";
 
 // // username = "null";
@@ -82,88 +84,157 @@ function splitArray() {
 
     var inputArray = prompt("Enter the Word to split");
 
-    var splittedArray=inputArray.split("");
-    console.log("Splitted Array : "+splittedArray);
+    var splittedArray = inputArray.split("");
+    console.log("Splitted Array : " + splittedArray);
 }
 
 // __________________ Dice _______________
 
-function throwDice(){
+function throwDice() {
     var inputDice = (Math.random() * 5) + 1;
-    console.log("Dice num: "+ Math.round(inputDice));
+    console.log("Dice num: " + Math.round(inputDice));
 }
 
 // ________________ ParseInt ______________
 
-function pInt(){
+function pInt() {
     var inputString = prompt("Enter the number to be converted");
     var cInt = parseInt(inputString);
-    console.log(10+inputString);
-    console.log(10+cInt);
+    console.log(10 + inputString);
+    console.log(10 + cInt);
 }
 
 // _________________ ParseFloat ___________________
 
-function pFloat(){
+function pFloat() {
     var inputString1 = prompt("Enter float number to be converted");
     var cFlt = parseFloat(inputString1);
-    console.log(10+inputString1);
-    console.log(10+cFlt);
+    console.log(10 + inputString1);
+    console.log(10 + cFlt);
     console.log(num3);
 }
 
 // _________________ Converting to Number ___________________
 
-function numFloat(){
+function numFloat() {
     var inputString2 = prompt("Enter float number to be converted");
     num3 = Number(inputString2); // ____________-using Number instead of parseFloat
-    console.log(inputString2+10);
-    console.log(num3+10);
+    console.log(inputString2 + 10);
+    console.log(num3 + 10);
 }
 
 // _________________ type of ___________________
 
-function ctypeOf(){
+function ctypeOf() {
     inputString3 = prompt("Enter float number to be converted");
-    num4 = typeof(inputString3);
+    num4 = typeof (inputString3);
     console.log(num4);
 }
 
 // ___________________ Date & Time__________________
 var date;
-function gDate(){
+function gDate() {
     date = new Date();
     console.log(date);
 }
 
-function savedDate(){
+function savedDate() {
     console.log(date);
 }
 
 var time;
-function gTime(){
+function gTime() {
     time = new Date().getTime();
     console.log(time);
 }
 
-function savedTime(){
+function savedTime() {
     console.log(time);
 }
 
 var DOB2;
-function inputDOB(){
+function inputDOB() {
     var eDate = prompt("Enter Date of Birth mm,dd,yyyy", new Date());
-    var DOB = new Date(eDate); 
+    var DOB = new Date(eDate);
     DOB2 = Date.parse(eDate);
-    console.log("Year is "+ DOB.getDay());
-    console.log("eDate "+ DOB2);
+    console.log("Year is " + DOB.getDay());
+    console.log("eDate " + DOB2);
 }
 
-function gYear(){
-    console.log("eDate "+ DOB2);
-    console.log("Year is "+ new Date(DOB2).getFullYear());
+function gYear() {
+    console.log("eDate " + DOB2);
+    console.log("Year is " + new Date(DOB2).getFullYear());
 }
-function gcTime(){
-    console.log("eDate "+ DOB2);
-    console.log("Current Time is "+ new Date(DOB2).getDate() +" "+ new Date(DOB2).getMonth() + " " + new Date(DOB2).getFullYear());
+function gcTime() {
+    console.log("eDate " + DOB2);
+    console.log("Current Time is " + new Date(DOB2).getDate() + " " + new Date(DOB2).getMonth() + " " + new Date(DOB2).getFullYear());
+}
+
+function setMonth() {
+    var month = prompt("Enter the Month ", new Date().setMonth());
+    console.log("Month is " + new Date(month).getMonth());
+}
+
+
+//----------------- Function return Multiple values ------------
+function mReturns() {
+    function mValues() {
+        var a = 5;
+        var b = 6;
+
+        return {
+            a, b
+        }
+    }
+    console.log(mValues().a);
+    console.log(mValues().b);
+}
+
+// _________________ Index of ___________________
+
+function indexOf() {
+    inputString = prompt("Enter String to check");
+    inputCharacter = prompt("Enter the character to check the Index of")
+    console.log(inputString.indexOf(inputCharacter));
+}
+// _________________ Back Tick Variable _________________
+
+function bTick(){
+    var fName = "Sohail";
+    var lName = "Ishaque";
+    console.log(`${fName} ${lName}`); //Does the same as below but more efficiently
+    console.log(fName+" "+lName);
+}
+
+// ______________ DOM __________________
+function bDOM(){
+    let _document = document;
+    console.log(`${_document} is document`);
+}
+
+function bTag(){
+    let eleH1 = document.getElementsByTagName('h1');
+    console.log(eleH1);
+}
+
+function qSelector(){
+    let eleH2 = document.querySelector('h2').innerText; //using Query selector instead of getElement
+    console.log(eleH2);
+}
+
+function q2Selector(){
+    let eleH2 = document.querySelector('h2').innerText = "Pakistan Zindabad"; //Inener text changes the text in h2 
+    console.log(eleH2);
+}
+
+function bClassName(){
+    let eleH1 = document.getElementsByClassName('class5');
+    console.log(eleH1);
+}
+
+//_____________ Creating DOM Element _____________
+
+function cPElement(){
+    let p = document.createElement("p");
+    console.log(p);
 }
